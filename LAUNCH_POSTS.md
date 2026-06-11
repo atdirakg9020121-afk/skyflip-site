@@ -26,7 +26,7 @@ Windows対応・基本無料
 ```
 位置情報から自動でいまの地域の天気を反映するので、設定いらずで置くだけ。
 
-桜・夜景・星空などの着せ替えテーマも用意してます🌸🌃✨
+桜・夜景・銀河などの着せ替えテーマも用意してます🌸🌃✨
 「眺める時計」、よかったら机の片隅にどうぞ。
 ```
 
@@ -79,7 +79,7 @@ Hey everyone! I've been building a small desktop app called SkyFlip.
 
 It's a flip-style clock, but the background reacts to your actual local weather in real time — rain streaks across the screen when it's raining, clouds drift when it's clear. It pulls your location automatically, so it just works once you place it on your desktop.
 
-I wanted something that's nice to *look at*, not just functional. There are also optional themes (sakura, neon night, starfield) for a bit of variety.
+I wanted something that's nice to *look at*, not just functional. There are also optional themes (sakura, neon night, galaxy) for a bit of variety.
 
 It's free on Windows. Would love any feedback on the feel of the animations 🙏
 
@@ -99,7 +99,7 @@ A desktop flip-clock that moves with your real weather
 ```
 SkyFlip is a desktop flip-clock that reacts to your real-time local weather. When it rains outside, rain streaks down your screen; when it's clear, clouds drift by. It detects your location automatically — no setup, just place it on your desktop and enjoy.
 
-Built for ambient calm rather than utility. Optional themes (sakura, neon night, starfield) let you redress the mood. Free on Windows.
+Built for ambient calm rather than utility. Optional themes (sakura, neon night, galaxy) let you redress the mood. Free on Windows.
 ```
 
 ### First comment（投稿者コメント — PHでは必須級）

@@ -199,7 +199,7 @@ section { padding: 96px 24px; }
 .theme-card__thumb--default { background: linear-gradient(135deg, #aed6f1, #d6eaf8); }
 .theme-card__thumb--sakura  { background: linear-gradient(135deg, #f8d7e0, #fbe9ef); }
 .theme-card__thumb--night   { background: linear-gradient(135deg, #2c3e50, #4a6491); }
-.theme-card__thumb--star    { background: linear-gradient(135deg, #1b2a4a, #3a4d7a); }
+.theme-card__thumb--galaxy  { background: linear-gradient(135deg, #1b1040, #4a2d7a 55%, #2a1b5a); }
 .theme-card__body { padding: 18px 18px 4px; text-align: left; }
 .theme-card__name { margin: 0 0 8px; font-size: 18px; }
 .theme-card__desc {
