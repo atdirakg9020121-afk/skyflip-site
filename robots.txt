@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://atdirakg9020121-afk.github.io/skyflip-site/sitemap.xml

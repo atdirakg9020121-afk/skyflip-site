@@ -22,8 +22,12 @@
 1ページ完結のランディングページ。上から: ①ヒーロー ②コンセプト ③特徴3つ ④テーマ紹介(課金導線) ⑤ダウンロード ⑥フッター
 
 ### ファイル
-- `index.html` — 本体。日本語コピー全部入り
-- `style.css` — 空・癒やし系デザイン。レスポンシブ対応済み
+- `index.html` — トップ。日本語コピー全部入り。OGP/JSON-LD/canonical/favicon 設定済み
+- `privacy.html` — プライバシーポリシー（位置情報・天気APIの扱い。Store審査用）
+- `contact.html` — お問い合わせ（連絡先はプレースホルダー、要差し替え）
+- `style.css` — 空・癒やし系デザイン。legal/contactページ用スタイルも含む。レスポンシブ対応済み
+- `favicon.svg` — 空＋フリップ時計のアイコン（自作SVG）
+- `robots.txt` / `sitemap.xml` — SEO用
 - `STORE_LISTING.md` — Microsoft Store 掲載文（コピペ用）
 - `CLAUDE.md` — このファイル
 
@@ -37,8 +41,10 @@
 - [ ] `assets/hero-poster.jpg` … 動画読み込み前のポスター画像
 - [ ] `assets/ogp.png` … SNSシェア用 1200×630
 - [ ] テーマ4枚のスクショ → `style.css` の `.theme-card__thumb--*` を仮グラデから `background-image` に差し替え
-- [ ] フッターの X / 問い合わせ / プライバシーポリシーのリンク先を設定
+- [ ] `contact.html` の連絡先（メール/X）をプレースホルダーから本物に差し替え
+- [ ] `privacy.html` の「天気情報サービス名＋そのプライバシーポリシーURL」と「提供者名」を記入
 - [ ] ⑤ダウンロードと①ヒーローの「Microsoft Store で入手」ボタンの href を実際のStore URLに
+- [ ] `assets/ogp.png`（OGP画像）を作成 — head のOGPタグが参照済み
 
 ## 公開方法
 GitHub Pages（無料）で公開予定。独自ドメインは後から設定可能。
