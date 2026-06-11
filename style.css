@@ -159,14 +159,35 @@ section { padding: 96px 24px; }
 .theme-card__thumb--sakura  { background: linear-gradient(135deg, #f8d7e0, #fbe9ef); }
 .theme-card__thumb--night   { background: linear-gradient(135deg, #2c3e50, #4a6491); }
 .theme-card__thumb--star    { background: linear-gradient(135deg, #1b2a4a, #3a4d7a); }
-.theme-card__name { margin: 16px 0 4px; font-size: 17px; }
-.theme-card__price { color: var(--accent-dark); font-weight: 600; }
+.theme-card__body { padding: 18px 18px 4px; text-align: left; }
+.theme-card__name { margin: 0 0 8px; font-size: 18px; }
+.theme-card__desc {
+  color: var(--ink-soft);
+  font-size: 13.5px;
+  line-height: 1.7;
+  min-height: 4.2em;
+  margin-bottom: 12px;
+}
+.theme-card__price { color: var(--accent-dark); font-weight: 700; font-size: 17px; }
+.theme-card__price--free { color: #2e9e6b; }
 .theme-note {
   text-align: center;
-  margin-top: 32px;
+  margin-top: 16px;
   color: var(--ink-soft);
   font-size: 14px;
 }
+.theme-bundle {
+  margin-top: 40px;
+  text-align: center;
+  background: #fff;
+  border: 1px dashed var(--accent);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+}
+.theme-bundle__lead { font-weight: 600; margin-bottom: 8px; }
+.theme-bundle__price { font-size: 18px; color: var(--ink); }
+.theme-bundle__price strong { color: var(--accent-dark); font-size: 22px; }
+.theme-bundle__save { color: #2e9e6b; font-size: 14px; font-weight: 600; }
 
 /* ===== ⑤ ダウンロード ===== */
 .download {
@@ -232,3 +253,35 @@ section { padding: 96px 24px; }
 }
 .contact-box p { margin-bottom: 4px; }
 .contact-note { color: var(--ink-soft); font-size: 14px; margin-top: 24px; }
+
+/* FAQ アコーディオン */
+.faq-item {
+  border: 1px solid #e3ebf3;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  background: #fff;
+  overflow: hidden;
+}
+.faq-item summary {
+  cursor: pointer;
+  padding: 16px 20px;
+  font-weight: 600;
+  list-style: none;
+  position: relative;
+  transition: background .15s ease;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "＋";
+  position: absolute;
+  right: 20px;
+  color: var(--accent);
+  transition: transform .2s ease;
+}
+.faq-item[open] summary::after { content: "－"; }
+.faq-item summary:hover { background: var(--bg-soft); }
+.faq-item p {
+  padding: 0 20px 18px;
+  color: var(--ink-soft);
+  margin: 0;
+}

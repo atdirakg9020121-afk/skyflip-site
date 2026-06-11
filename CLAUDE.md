@@ -27,8 +27,11 @@
 - `contact.html` — お問い合わせ（連絡先はプレースホルダー、要差し替え）
 - `style.css` — 空・癒やし系デザイン。legal/contactページ用スタイルも含む。レスポンシブ対応済み
 - `favicon.svg` — 空＋フリップ時計のアイコン（自作SVG）
+- `faq.html` — よくある質問（アコーディオン式）
+- `terms.html` — 利用規約（提供者名はプレースホルダー、要差し替え）
 - `robots.txt` / `sitemap.xml` — SEO用
-- `STORE_LISTING.md` — Microsoft Store 掲載文（コピペ用）
+- `STORE_LISTING.md` — Microsoft Store 掲載文＋**価格・課金設計の確定版**（サイトと整合させること）
+- `LAUNCH_POSTS.md` — ローンチ告知文ストック（X/Reddit/ProductHunt、日英）
 - `CLAUDE.md` — このファイル
 
 ## デザイン/トーンの方針
