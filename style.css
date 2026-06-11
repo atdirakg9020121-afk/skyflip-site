@@ -154,20 +154,48 @@ section { padding: 96px 24px; }
   height: 110px;
   position: relative;
 }
-/* 朝昼夕夜の空色。実機のリニア変化を象徴 */
-.story-step__sky--morning { background: linear-gradient(180deg, #f9d9a0, #cfe6f5); }
-.story-step__sky--noon    { background: linear-gradient(180deg, #4a90d9, #aed6f1); }
-.story-step__sky--evening { background: linear-gradient(180deg, #e98a5b, #f6c89a); }
-.story-step__sky--night   { background: linear-gradient(180deg, #14233f, #2c3e60); }
-/* 夜だけ月を浮かべる */
+/* 朝昼夕夜の空色。実機の配色に合わせる（昼＝オレンジ／夜＝青の対比が SkyFlip の特徴） */
+.story-step__sky--morning { background: linear-gradient(180deg, #d98a3c, #f0b46e); } /* 朝＝オレンジ */
+.story-step__sky--noon    { background: linear-gradient(180deg, #cd8237, #e0a85a); } /* 昼＝黄金オレンジ */
+.story-step__sky--evening { background: linear-gradient(180deg, #5c2832, #b85a3a); } /* 夕＝赤・ピンク→橙 */
+.story-step__sky--night   { background: linear-gradient(180deg, #061030, #1a2a5a); } /* 夜＝深い青 */
+/* 昼：太陽（光芒＋グロー＋本体）。アプリの drawCelestial を再現 */
+.story-step__sky--noon::before {
+  content: "";
+  position: absolute;
+  top: 14px; left: 50%;
+  width: 64px; height: 64px;
+  transform: translateX(-50%);
+  /* 放射する光芒（円錐グラデの繰り返し） */
+  background:
+    repeating-conic-gradient(from 0deg,
+      rgba(255,225,150,.55) 0deg 4deg,
+      transparent 4deg 30deg);
+  -webkit-mask: radial-gradient(circle, #000 8px, transparent 26px);
+          mask: radial-gradient(circle, #000 8px, transparent 26px);
+}
+.story-step__sky--noon::after {
+  content: "";
+  position: absolute;
+  top: 24px; left: 50%;
+  width: 26px; height: 26px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  /* 本体：中心が白く、ふちがオレンジ＋グロー */
+  background: radial-gradient(circle, #fffdf2 30%, #ffe39a 70%, #ffc869 100%);
+  box-shadow: 0 0 18px 8px rgba(255, 214, 120, .65);
+}
+/* 夜：月（満ち欠け＋やわらかいグロー）。アプリの月を再現 */
 .story-step__sky--night::after {
   content: "";
   position: absolute;
-  top: 22px; right: 28px;
-  width: 26px; height: 26px;
+  top: 20px; right: 26px;
+  width: 28px; height: 28px;
   border-radius: 50%;
-  background: #f4f1e0;
-  box-shadow: -7px 0 0 -1px #2c3e60;  /* 三日月風 */
+  background: #eef0ff;
+  box-shadow:
+    -8px 0 0 -1px #0c1c4e,            /* 右が光る上弦風の満ち欠け */
+    0 0 16px 5px rgba(220, 230, 255, .4); /* ソフトなグロー */
 }
 .story-step__time { margin: 16px 0 6px; font-size: 18px; }
 .story-step__text { color: var(--ink-soft); font-size: 13.5px; padding: 0 16px; line-height: 1.7; }
@@ -195,11 +223,29 @@ section { padding: 96px 24px; }
   background-size: cover;
   background-position: center;
 }
-/* 画像ができるまでの仮グラデーション。あとで background-image に差し替え */
+/* 画像ができるまでの仮グラデーション。あとで background-image に差し替え（アプリの実テーマに寄せた色味） */
 .theme-card__thumb--default { background: linear-gradient(135deg, #aed6f1, #d6eaf8); }
-.theme-card__thumb--sakura  { background: linear-gradient(135deg, #f8d7e0, #fbe9ef); }
-.theme-card__thumb--night   { background: linear-gradient(135deg, #2c3e50, #4a6491); }
-.theme-card__thumb--galaxy  { background: linear-gradient(135deg, #1b1040, #4a2d7a 55%, #2a1b5a); }
+.theme-card__thumb--sakura  {
+  background:
+    radial-gradient(circle at 15% 90%, rgba(120,80,90,.5) 0 8%, transparent 9%),
+    linear-gradient(135deg, #f8d0dd, #fbe9ef);
+}
+/* ネオン夜景：サイバーパンク（シアン×マゼンタ＋足元のグリッド） */
+.theme-card__thumb--night {
+  background:
+    repeating-linear-gradient(0deg, rgba(0,230,255,.10) 0 1px, transparent 1px 7px),
+    radial-gradient(circle at 30% 100%, rgba(255,40,150,.55), transparent 55%),
+    radial-gradient(circle at 75% 90%, rgba(0,220,255,.40), transparent 55%),
+    linear-gradient(135deg, #140a2e, #3a1060 60%, #1a0a3a);
+}
+/* 深宇宙と銀河：カラフルな星雲＋惑星の気配 */
+.theme-card__thumb--galaxy  {
+  background:
+    radial-gradient(circle at 80% 30%, rgba(217,139,90,.85) 0 6%, transparent 7%),
+    radial-gradient(circle at 25% 35%, rgba(40,200,200,.30), transparent 45%),
+    radial-gradient(circle at 60% 70%, rgba(230,80,160,.30), transparent 50%),
+    linear-gradient(135deg, #1b1040, #4a2d7a 55%, #2a1b5a);
+}
 .theme-card__body { padding: 18px 18px 4px; text-align: left; }
 .theme-card__name { margin: 0 0 8px; font-size: 18px; }
 .theme-card__desc {
