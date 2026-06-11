@@ -41,6 +41,7 @@
 - `LAUNCH_POSTS.md` — ローンチ告知文ストック（X/Reddit/ProductHunt、日英）
 - `OGP_DESIGN.md` — OGP画像(assets/ogp.png)のデザイン設計書（案A〜C）
 - `ROADMAP.md` — 開発ロードマップ（v1.0実装済み〜v3.0構想）
+- `STORE_SUBMISSION_CHECKLIST.md` — Store提出までの全手順（会社可🏢/自宅🏠で分類）
 - `CLAUDE.md` — このファイル
 
 ### サイトのセクション構成（index.html）
