@@ -126,3 +126,68 @@ SkyFlip 初回リリース。フリップ時計＋天気連動アニメーショ
 ## サイトとの整合
 このファイルの価格・テーマ構成は、サイト（index.html ④テーマセクション）と一致させること。
 どちらかを変えたら必ず両方更新する。
+
+---
+---
+
+# English Store Listing （英語掲載文 / 任意・後追いでOK）
+
+> ⚠️ 要推敲：機械的でなく自然な英語に。自宅で見直すこと。Storeは言語ごとに掲載文を登録できるので、
+> 日本語版を出した後にこの英語版を追加すれば英語圏の検索に乗る。
+
+## Product name
+SkyFlip
+
+## Short description (≈100 chars)
+A desktop flip-clock that mirrors your real sky — time, weather, and the moon's true phase.
+
+## Description
+SkyFlip is a desktop flip-clock where the real sky quietly comes to life.
+
+Beside the satisfying flip of the clock, the sky outside your window moves on your screen. The background shifts color through morning, noon, and night; the sun rises and sets, and at night the moon drifts across the sky — showing the very same phase as tonight's real moon. When it rains, rain streaks down the screen and the sky dims to match. It isn't built to check information, but to feel good when you glance at it.
+
+■ Features
+- Flip clock: the satisfying, analog feel of flipping digits
+- A sky that moves with time: background color shifts smoothly through the day
+- Moving sun and moon: they travel across the sky as the hours pass
+- The real moon phase: fetches the actual lunar age and mirrors tonight's moon
+- Live weather: reflects current conditions; the sky darkens in rain or snow
+- Automatic by location: shows your local sky with no setup (manual region also supported)
+- Runs on startup and lives on your desktop
+- Monthly calendar at the press of a button
+
+■ Themes (in-app)
+Dress up SkyFlip's world to match your mood or the season.
+- Standard (free)
+- Spring Sakura
+- Neon Night
+- Deep Space & Galaxy
+Available individually or as an all-themes pack.
+
+The app itself is free. Just place it on your desktop and watch.
+
+■ Requirements
+Windows 10 / 11
+
+## Product features (bullets)
+- Smooth flip-clock animation
+- Background color that shifts through morning, noon, and night
+- Sun and moon that move with the time of day
+- The real moon phase based on actual lunar age
+- Live weather sync (the sky darkens in rain and snow)
+- Automatic local weather via location
+- Launches on startup and stays on your desktop
+- Monthly calendar view
+- Optional dress-up themes for season and mood
+
+## Search terms (max 7)
+clock, flip clock, weather, widget, desktop, moon, ambient
+
+## Screenshot captions
+1. Your local weather, as a clock that moves.
+2. When it rains outside, it rains on your screen.
+3. Tonight's moon — the real phase, on your desktop.
+4. Just place it. It shows your sky, no setup needed.
+
+## Release notes (v1.0.0)
+First release of SkyFlip. Flip clock with time-of-day sky, moving sun and moon, real moon phase, and live weather animation.

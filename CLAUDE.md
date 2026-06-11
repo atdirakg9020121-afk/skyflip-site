@@ -70,7 +70,11 @@ start index.html        # Windows。そのまま開ける
 - `OGP_DESIGN.md` — OGP画像(assets/ogp.png)のデザイン設計書（案A〜C）
 - `ROADMAP.md` — 開発ロードマップ（v1.0実装済み〜v3.0構想）
 - `STORE_SUBMISSION_CHECKLIST.md` — Store提出までの全手順（会社可🏢/自宅🏠で分類）
+- `LAUNCH_CHECKLIST.md` — 公開ボタンを押す前の最終確認（プレースホルダー残存チェック等）
+- `DEMO_STORYBOARD.md` — hero動画/SNS GIF/スクショの絵コンテ＆撮影ガイド
+- `404.html` — 404ページ（夜空＋月の世界観。GitHub Pagesが自動使用）
 - `CLAUDE.md` — このファイル
+- `STORE_LISTING.md` には英語掲載文も追記済み（任意・後追い用）
 
 ### サイトのセクション構成（index.html）
 ①ヒーロー ②コンセプト ③特徴6つ ③.5「一日の移ろい」(朝昼夕夜+月齢の魅せ場) ④テーマ(課金) ⑤DL ⑥フッター

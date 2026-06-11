@@ -326,3 +326,37 @@ section { padding: 96px 24px; }
   color: var(--ink-soft);
   margin: 0;
 }
+
+/* ===== 404ページ ===== */
+.notfound {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 24px;
+  background: linear-gradient(180deg, #14233f, #2c3e60);
+  color: #fff;
+}
+.notfound__sky {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 8px;
+}
+.notfound__moon {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #f4f1e0;
+  box-shadow: -22px 0 0 -2px #2c3e60, 0 0 40px rgba(244,241,224,.4); /* 三日月＋淡い光 */
+}
+.notfound__code {
+  font-size: clamp(56px, 12vw, 96px);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin: 8px 0;
+}
+.notfound__lead { font-size: clamp(18px, 3vw, 24px); margin-bottom: 8px; }
+.notfound__text { color: #c5cfd9; margin-bottom: 32px; }
