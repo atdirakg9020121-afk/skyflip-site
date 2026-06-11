@@ -1,5 +1,33 @@
 # CLAUDE.md — SkyFlip ショーケースサイト
 
+## 🏠 自宅PCで再開するときの最初の一歩（クイックスタート）
+このリポジトリは会社PCで作成し、GitHubに公開済み。自宅PCで続きをやるには:
+
+```bash
+# 1. クローン（まだ無ければ）
+git clone https://github.com/atdirakg9020121-afk/skyflip-site.git
+cd skyflip-site
+
+# 2. サイトを確認（ビルド不要。静的HTMLなのでブラウザで開くだけ）
+start index.html        # Windows。そのまま開ける
+
+# 3. 編集して反映する流れ
+#    ファイルを編集 → git add -A → git commit -m "..." → git push
+#    push すると GitHub Pages が自動で再ビルド（1〜2分で公開URLに反映）
+```
+
+- 公開URL: https://atdirakg9020121-afk.github.io/skyflip-site/
+- GitHubリポジトリ: https://github.com/atdirakg9020121-afk/skyflip-site
+- **ビルドツール・依存パッケージは無し**（npm install 不要）。素のHTML/CSS/SVGのみ。
+- **アプリ本体のソースは別リポジトリ。** 仕様確認のため、Claudeに作業させる際はアプリ側のリポジトリも開いておくと、実装と仕様のズレ（例: 過去に「星空テーマ」が標準機能と被っていた件）を防げる。
+
+## おすすめ作業順（自宅・詰まり最小ルート）
+1. **Partner Center 登録**を真っ先に着手（本人確認の審査待ちが発生するため。`STORE_SUBMISSION_CHECKLIST.md` フェーズ0）
+2. 審査を待つ間に **素材を書き出す**（hero動画・テーマ4枚スクショ・アイコン各サイズ）
+3. 素材が出たら **サイトのプレースホルダーを差し替え**（下の「差し替え一覧」参照）→ commit & push
+4. **electron-builder で appx を一度通す**（技術的に一番の関門。詰まったらClaudeに相談）
+5. Store 提出（`STORE_SUBMISSION_CHECKLIST.md` を上から潰す）
+
 ## このプロジェクトは何か
 デスクトップアプリ **SkyFlip** の紹介用ランディングページ（ショーケースサイト）。
 アプリ本体のコードは別リポジトリ（自宅PCにある）。ここは**宣伝・集客専用のサイト**。
@@ -26,7 +54,7 @@
 - 課金実装は `StoreContext` API 経由（Electron からは未着手。自宅PCで実装予定）
 
 ## このサイトの構成
-1ページ完結のランディングページ。上から: ①ヒーロー ②コンセプト ③特徴3つ ④テーマ紹介(課金導線) ⑤ダウンロード ⑥フッター
+1ページ完結のランディングページ（詳細は下の「サイトのセクション構成」を参照）。
 
 ### ファイル
 - `index.html` — トップ。日本語コピー全部入り。OGP/JSON-LD/canonical/favicon 設定済み
@@ -53,14 +81,28 @@
 - カラー: 空の青(#4a90d9)を基調に、余白多め
 
 ## 残タスク（自宅PCでやること）
-- [ ] `assets/hero.mp4` … アプリ動作のループ動画（最重要）
-- [ ] `assets/hero-poster.jpg` … 動画読み込み前のポスター画像
-- [ ] `assets/ogp.png` … SNSシェア用 1200×630
-- [ ] テーマ4枚のスクショ → `style.css` の `.theme-card__thumb--*` を仮グラデから `background-image` に差し替え
-- [ ] `contact.html` の連絡先（メール/X）をプレースホルダーから本物に差し替え
-- [ ] `privacy.html` の「天気情報サービス名＋そのプライバシーポリシーURL」と「提供者名」を記入
-- [ ] ⑤ダウンロードと①ヒーローの「Microsoft Store で入手」ボタンの href を実際のStore URLに
-- [ ] `assets/ogp.png`（OGP画像）を作成 — head のOGPタグが参照済み
+
+### A. 用意する素材ファイル（`assets/` フォルダを作って置く）
+- [ ] `assets/hero.mp4` … アプリ動作のループ動画（**最重要**。サイトの第一印象）
+- [ ] `assets/hero-poster.jpg` … 動画読み込み前に出るポスター画像
+- [ ] `assets/ogp.png` … SNSシェア用 1200×630（作り方は `OGP_DESIGN.md`）
+- [ ] テーマ4枚のスクショ（スタンダード/桜/ネオン夜景/深宇宙と銀河）
+
+### B. プレースホルダー差し替え（各ファイルを開いて該当文字列を検索）
+画面上で黄色ハイライト or HTMLコメントで目印を付けてある。検索ワードで一発で飛べる:
+
+| ファイル | 検索する目印 | 何に差し替えるか |
+|---|---|---|
+| `contact.html` | `example@example.com` / `差し替えここまで` | 連絡用メール / XアカウントURL |
+| `privacy.html` | `legal__placeholder` | 天気情報サービス名＋そのプライバシーポリシーURL、提供者名 |
+| `terms.html` | `legal__placeholder` | 提供者名 |
+| `style.css` | `.theme-card__thumb--default` 等 | 仮グラデ → 実スクショの `background-image` |
+| `index.html` | `href="#download"` 付近のボタン | 「Microsoft Store で入手」のhref（①ヒーロー/⑤DL）→ 実Store URL |
+| `LAUNCH_POSTS.md` | `［公開後にStore URLを記入］` | 各告知文のURL |
+
+### C. 整合性の維持（変えたら両方直す）
+- テーマ名・価格を変えたら `STORE_LISTING.md` とサイト(index.html ④)を**両方**更新
+- アプリの仕様（機能）を変えたら、このCLAUDE.md の「実装済み機能」とサイト③/③.5、STORE_LISTINGを更新
 
 ## 公開方法
 GitHub Pages（無料）で公開予定。独自ドメインは後から設定可能。
