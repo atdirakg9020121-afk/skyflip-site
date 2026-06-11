@@ -1,0 +1,12 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# エディタ
+.vscode/
+.idea/
+*.swp
+
+# 動画/巨大素材を一旦除外したい場合はここに追記
+# assets/*.mp4

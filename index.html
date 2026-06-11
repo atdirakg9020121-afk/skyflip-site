@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkyFlip — 窓の外の天気を、机の上に。</title>
+  <meta name="description" content="フリップ時計と、いまの天気が連動して動くデスクトップアプリ。雨が降れば画面にも雨が、晴れれば雲が流れる。眺めるだけで心地よい時計。" />
+
+  <!-- OGP（SNSでシェアされたときの見た目） -->
+  <meta property="og:title" content="SkyFlip — 窓の外の天気を、机の上に。" />
+  <meta property="og:description" content="いまの天気が連動して動くフリップ時計のデスクトップアプリ。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/ogp.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ① ヒーロー -->
+  <header class="hero">
+    <video class="hero__bg" autoplay muted loop playsinline poster="assets/hero-poster.jpg">
+      <source src="assets/hero.mp4" type="video/mp4" />
+    </video>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <h1 class="hero__title">SkyFlip</h1>
+      <p class="hero__copy">窓の外の天気を、机の上に。</p>
+      <p class="hero__sub">いまの空が、そのまま動く時計になる。</p>
+      <a class="btn btn--primary" href="#download">Microsoft Store で入手</a>
+    </div>
+  </header>
+
+  <!-- ② コンセプト -->
+  <section class="concept">
+    <p class="concept__lead">
+      フリップ時計が時を刻むそばで、<br />
+      いまいる場所の天気が、画面の中で静かに動く。
+    </p>
+    <p class="concept__body">
+      雨が降れば画面にも雨が伝い、晴れれば雲がゆっくり流れていく。<br />
+      情報を見るためではなく、<strong>眺めて心地よくなるための時計</strong>です。
+    </p>
+  </section>
+
+  <!-- ③ 特徴3つ -->
+  <section class="features">
+    <div class="feature">
+      <div class="feature__icon">🕐</div>
+      <h3 class="feature__title">フリップ時計</h3>
+      <p class="feature__text">パタンと数字がめくれる、あの心地よいアナログ感をデスクトップに。</p>
+    </div>
+    <div class="feature">
+      <div class="feature__icon">🌦️</div>
+      <h3 class="feature__title">天気と連動</h3>
+      <p class="feature__text">いまの天気を取得して、背景の雨・雲・空模様がリアルタイムに変化。</p>
+    </div>
+    <div class="feature">
+      <div class="feature__icon">📍</div>
+      <h3 class="feature__title">位置情報で自動</h3>
+      <p class="feature__text">あなたのいる場所の空を自動で反映。設定いらずで、置くだけ。</p>
+    </div>
+  </section>
+
+  <!-- ④ テーマ紹介（課金導線） -->
+  <section class="themes" id="themes">
+    <h2 class="section__title">空気を、着せ替える。</h2>
+    <p class="section__sub">気分や季節に合わせて、SkyFlip の世界をテーマで彩れます。</p>
+    <div class="theme-grid">
+      <div class="theme-card">
+        <div class="theme-card__thumb theme-card__thumb--default"></div>
+        <h3 class="theme-card__name">スタンダード</h3>
+        <p class="theme-card__price">無料</p>
+      </div>
+      <div class="theme-card">
+        <div class="theme-card__thumb theme-card__thumb--sakura"></div>
+        <h3 class="theme-card__name">桜の舞う春</h3>
+        <p class="theme-card__price">¥320</p>
+      </div>
+      <div class="theme-card">
+        <div class="theme-card__thumb theme-card__thumb--night"></div>
+        <h3 class="theme-card__name">ネオン夜景</h3>
+        <p class="theme-card__price">¥320</p>
+      </div>
+      <div class="theme-card">
+        <div class="theme-card__thumb theme-card__thumb--star"></div>
+        <h3 class="theme-card__name">星空と流星</h3>
+        <p class="theme-card__price">¥320</p>
+      </div>
+    </div>
+    <p class="theme-note">※ テーマは全部入りパック ¥980 でもまとめて入手できます。</p>
+  </section>
+
+  <!-- ⑤ ダウンロード -->
+  <section class="download" id="download">
+    <h2 class="section__title">無料ではじめる。</h2>
+    <p class="section__sub">アプリ本体は無料。気に入ったらテーマで彩りを足してください。</p>
+    <a class="btn btn--primary btn--lg" href="#" aria-label="Microsoft Store で入手">
+      Microsoft Store で入手
+    </a>
+    <p class="download__note">Windows 10 / 11 対応</p>
+  </section>
+
+  <!-- ⑥ フッター -->
+  <footer class="footer">
+    <p class="footer__brand">SkyFlip</p>
+    <nav class="footer__nav">
+      <a href="#">X (Twitter)</a>
+      <a href="#">お問い合わせ</a>
+      <a href="#">プライバシーポリシー</a>
+    </nav>
+    <p class="footer__copy">© 2026 SkyFlip. Made by an indie developer.</p>
+  </footer>
+
+</body>
+</html>
