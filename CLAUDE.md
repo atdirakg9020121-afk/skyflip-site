@@ -3,6 +3,8 @@
 ## 🏠 自宅PCで再開するときの最初の一歩（クイックスタート）
 このリポジトリは会社PCで作成し、GitHubに公開済み。自宅PCで続きをやるには:
 
+> ⚠️ **自宅PCにはまだ Git も gh も入っていない。** 先に `HOME_PC_SETUP.md` の手順（インストール→gh認証→clone）を実行すること。下のコマンドはその後の話。
+
 ```bash
 # 1. クローン（まだ無ければ）
 git clone https://github.com/atdirakg9020121-afk/skyflip-site.git
@@ -73,6 +75,7 @@ start index.html        # Windows。そのまま開ける
 - `LAUNCH_CHECKLIST.md` — 公開ボタンを押す前の最終確認（プレースホルダー残存チェック等）
 - `DEMO_STORYBOARD.md` — hero動画/SNS GIF/スクショの絵コンテ＆撮影ガイド
 - `404.html` — 404ページ（夜空＋月の世界観。GitHub Pagesが自動使用）
+- `HOME_PC_SETUP.md` — 自宅PC（まっさら）にGit/ghを入れてcloneするまでの手順
 - `CLAUDE.md` — このファイル
 - `STORE_LISTING.md` には英語掲載文も追記済み（任意・後追い用）
 
