@@ -3,6 +3,7 @@
 公開日に「投下するだけ」にしておくための原稿集。URL は公開後に確定したものへ差し替え。
 - サイト: https://atdirakg9020121-afk.github.io/skyflip-site/
 - Store: ［公開後にStore URLを記入］
+- アプリ正式名は **SkyFlip Clock**。各原稿の初出は正式名にしてある。本文の繰り返しで語感優先に「SkyFlip」と略すのは可。
 
 ---
 
@@ -10,7 +11,7 @@
 
 ### メインポスト（画像/動画を必ず添付）
 ```
-自作アプリ「SkyFlip」を公開しました🌤️
+自作アプリ「SkyFlip Clock」を公開しました🌤️
 
 フリップ時計と"いまの天気"が連動して動くデスクトップアプリです。
 雨が降れば画面にも雨が伝い、晴れれば雲が流れる。
@@ -43,7 +44,7 @@ Windows・無料 → https://atdirakg9020121-afk.github.io/skyflip-site/
 
 ### Main post (attach video/GIF)
 ```
-I made SkyFlip 🌤️
+I made SkyFlip Clock 🌤️
 
 A desktop flip-clock that reacts to your real-time local weather.
 When it rains outside, it rains on your screen too. When it's clear, clouds drift by.
