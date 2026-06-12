@@ -1,27 +1,39 @@
-# CLAUDE.md — SkyFlip ショーケースサイト
+# CLAUDE.md — SkyFlip Clock ショーケースサイト
 
-## 🏠 自宅PCで再開するときの最初の一歩（クイックスタート）
-このリポジトリは会社PCで作成し、GitHubに公開済み。自宅PCで続きをやるには:
+> アプリの**正式名は「SkyFlip Clock」**（Store/サイトの表示名）。検索時の名前かぶり回避で "Clock" を付けた。
+> 本文の語り口は短く "SkyFlip" でも可。GitHubリポジトリ名は `skyflip-site`（サイト）／`skyflip`（アプリ本体）。
 
-> ⚠️ **自宅PCにはまだ Git も gh も入っていない。** 先に `HOME_PC_SETUP.md` の手順（インストール→gh認証→clone）を実行すること。下のコマンドはその後の話。
+## 🖥️ どのPCでも再開できる（自宅／会社 共通クイックスタート）
+2つのGitHubリポジトリで管理。**会社PCでも自宅PCでも、同じ手順でcloneして続きをやれる**。
+
+> **前提（初回のみ）**: そのPCに Git と GitHub CLI(`gh`) が必要。
+> - 入っていなければ: `winget install Git.Git` と `winget install GitHub.cli`（要ターミナル再起動でPATH反映）
+> - 認証: `gh auth login`（GitHub.com → HTTPS → ブラウザ認証。アカウントは `atdirakg9020121-afk`）
+> - ※ private な `skyflip`（アプリ本体）を clone するには gh 認証が必須。
 
 ```bash
-# 1. クローン（まだ無ければ）
-git clone https://github.com/atdirakg9020121-afk/skyflip-site.git
-cd skyflip-site
+# 1. 両リポジトリを clone（まだ無ければ）
+git clone https://github.com/atdirakg9020121-afk/skyflip-site.git   # このサイト
+git clone https://github.com/atdirakg9020121-afk/skyflip.git        # アプリ本体(private)
 
 # 2. サイトを確認（ビルド不要。静的HTMLなのでブラウザで開くだけ）
+cd skyflip-site
 start index.html        # Windows。そのまま開ける
 
 # 3. 編集して反映する流れ
 #    ファイルを編集 → git add -A → git commit -m "..." → git push
 #    push すると GitHub Pages が自動で再ビルド（1〜2分で公開URLに反映）
+
+# 既に clone 済みのPCなら、作業前に最新化:
+git pull
 ```
 
 - 公開URL: https://atdirakg9020121-afk.github.io/skyflip-site/
-- GitHubリポジトリ: https://github.com/atdirakg9020121-afk/skyflip-site
+- サイトのGitHub: https://github.com/atdirakg9020121-afk/skyflip-site
+- アプリ本体のGitHub: https://github.com/atdirakg9020121-afk/skyflip （private）
 - **ビルドツール・依存パッケージは無し**（npm install 不要）。素のHTML/CSS/SVGのみ。
-- **アプリ本体のソースは別リポジトリ。** 仕様確認のため、Claudeに作業させる際はアプリ側のリポジトリも開いておくと、実装と仕様のズレ（例: 過去に「星空テーマ」が標準機能と被っていた件）を防げる。
+- **アプリ本体のソースは別リポジトリ（`skyflip`）。** Claudeに作業させる際はアプリ側も clone しておくと、実装と仕様のズレ（例: 過去に「星空テーマ」が標準機能と被っていた件）を防げる。
+- **複数PCで作業する注意**: 別PCで commit/push したら、次のPCでは作業前に必ず `git pull`。push を忘れると別PCに反映されない。
 
 ## おすすめ作業順（自宅・詰まり最小ルート）
 1. **Partner Center 登録**を真っ先に着手（本人確認の審査待ちが発生するため。`STORE_SUBMISSION_CHECKLIST.md` フェーズ0）
@@ -38,15 +50,18 @@ start index.html        # Windows。そのまま開ける
 - **アプリ本体のソース**: GitHub `atdirakg9020121-afk/skyflip`（private / Electron）。詳細仕様はそのリポジトリの `CLAUDE.md` に網羅されている。仕様確認はそちらを正とする。
 - **価格はサイトに出さない方針**（金のにおいを避ける）。具体価格はStore/アプリ内課金にだけ設定。
 
-## SkyFlip（アプリ本体）について
+## SkyFlip Clock（アプリ本体）について
 フリップ型の時計アニメーションを軸に、現実の空をデスクトップに映すアプリ。実装済み機能:
 - フリップ時計アニメーション
-- 朝・昼・夜で背景色がリニアに変化
-- 時刻に応じて太陽・月が空を移動
+- 朝・昼・夜で背景色がリニアに変化（**昼＝オレンジ／夜＝青**の対比が特徴）
+- 時刻に応じて太陽・月が空を移動（太陽は光芒＋グロー、月は満ち欠け＋グロー）
 - 実際の月齢を取得し、本物と同じ満ち欠けを背景に投影
 - 現在地の天気とリアルタイム連動（位置情報で自動取得）。雨・雪のとき背景が暗くなる
 - OS起動時に自動起動、デスクトップ常駐
 - ボタンで月単位カレンダー表示
+- **着せ替えテーマ（課金）**: スタンダード(無料)／桜の舞う春／ネオン夜景／深宇宙と銀河。
+  各テーマは専用演出（桜の木＋花びら／サイバーパンク＋スチームパンクの夜景／星雲＋星座＋惑星）。
+  悪天候時はテーマも暗く沈む。**標準演出（流れ星・星空）と被らせない**方針（被ると返金原因）。
 
 - 技術スタック: **Electron** / 対応OS: **Windows のみ** / 目的: **収益化**
 
