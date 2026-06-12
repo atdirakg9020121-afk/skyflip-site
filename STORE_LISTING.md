@@ -28,7 +28,7 @@ SkyFlip Clock は、フリップ時計と「現実の空」が静かに連動す
 ・本物の月の満ち欠け：実際の月齢を取得し、いま夜空に浮かぶのと同じ姿の月を再現
 ・天気と連動：いまの天気を取得し、雨・雪のときは空もそれに合わせて暗く沈む
 ・位置情報で自動：あなたのいる場所の空を自動で反映。設定いらずで、置くだけ（地域の手動設定にも対応）
-・デスクトップ常駐：OS起動時に自動で立ち上がり、置くだけで働く
+・デスクトップ常駐：OS起動時に自動で立ち上がり、置くだけで働く。常に手前に固定する表示も可能
 ・カレンダー表示：ボタンひとつで月単位のカレンダーに切り替え
 
 ■ 着せ替えテーマ（アプリ内で追加）
@@ -53,7 +53,7 @@ Windows 10 / 11
 - 実際の月齢に基づく本物の月の満ち欠け
 - 現在の天気とリアルタイムに連動（雨・雪で背景が暗くなる）
 - 位置情報による自動の天気取得
-- OS起動時の自動起動とデスクトップ常駐
+- OS起動時の自動起動とデスクトップ常駐（常に手前に固定も可能）
 - 月単位のカレンダー表示
 - 季節や気分で選べる着せ替えテーマ
 
@@ -156,7 +156,7 @@ Beside the satisfying flip of the clock, the sky outside your window moves on yo
 - The real moon phase: fetches the actual lunar age and mirrors tonight's moon
 - Live weather: reflects current conditions; the sky darkens in rain or snow
 - Automatic by location: shows your local sky with no setup (manual region also supported)
-- Runs on startup and lives on your desktop
+- Runs on startup and lives on your desktop (can be pinned always-on-top)
 - Monthly calendar at the press of a button
 
 ■ Themes (in-app)
@@ -179,7 +179,7 @@ Windows 10 / 11
 - The real moon phase based on actual lunar age
 - Live weather sync (the sky darkens in rain and snow)
 - Automatic local weather via location
-- Launches on startup and stays on your desktop
+- Launches on startup and stays on your desktop (optional always-on-top)
 - Monthly calendar view
 - Optional dress-up themes for season and mood
 
