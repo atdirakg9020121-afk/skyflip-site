@@ -79,13 +79,18 @@ start index.html
 
 ## STEP 7. 編集 → 反映の流れ（毎回これ）
 ```powershell
-# ファイルを編集したあと
+git pull                  # ★ 作業を始める前に必ず最初に1回（別PCの変更を取り込む）
+# …ファイルを編集したあと…
 git add -A
 git commit -m "変更内容を書く"
 git push
 ```
 → push すると GitHub Pages が自動で再ビルドし、1〜2分で公開URLに反映:
 https://atdirakg9020121-afk.github.io/skyflip-site/
+
+> ⚠️ **`git pull` を忘れると事故る。** 別PCで先に変更が入っていると push が弾かれ、衝突（CONFLICT）になる。
+> 作業開始時にまず `git pull`。もし衝突したら自力で直さず Claude に「pullで衝突した」と頼むのが安全。
+> （これはアプリ本体 `skyflip` リポジトリでも同じ。どのフォルダでも「作業前に pull」）
 
 ---
 
